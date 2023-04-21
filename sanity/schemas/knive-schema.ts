@@ -58,6 +58,11 @@ const knives = {
       title: 'Is the item available?',
       type: 'boolean',
     },
+    {
+      name: 'category',
+      title: 'Category',
+      type: 'string',
+    },
   ],
 };
 

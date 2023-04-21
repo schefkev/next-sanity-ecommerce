@@ -12,4 +12,5 @@ export type Knive = {
   price: number;
   content: PortableTextBlock[];
   availability: boolean;
+  category: string;
 };

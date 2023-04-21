@@ -16,8 +16,29 @@ export async function getKnives(): Promise<Knive[]> {
       header,
       sub,
       price,
-      content
+      content,
+      availability
     }`,
+  );
+}
+
+export async function getKnive(slug: string): Promise<Knive> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == 'knive' && slug.current == $slug][0]{
+      _id,
+      _createdAt,
+      name,
+      "slug": slug.current,
+      "image": image.asset->url,
+      title,
+      header,
+      sub,
+      price,
+      content,
+      availability,
+      category
+    }`,
+    { slug: slug },
   );
 }
 
@@ -33,7 +54,8 @@ export async function getAccessories(): Promise<Accessory[]> {
       header,
       sub,
       price,
-      content
+      content,
+      availability
     }`,
   );
 }
@@ -50,7 +72,8 @@ export async function getJackets(): Promise<Jacket[]> {
       header,
       sub,
       price,
-      content
+      content,
+      availability
     }`,
   );
 }
