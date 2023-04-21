@@ -36,12 +36,12 @@ export default function Header() {
             </Link>
           </div>
           <div className="ml-2 lg:ml-4 relative inline-block">
-            <Link href="/" className="hover:underline">
+            <Link href="/uniforms" className="hover:underline">
               Uniform
             </Link>
           </div>
           <div className="ml-2 lg:ml-4 relative inline-block">
-            <Link href="/" className="hover:underline">
+            <Link href="/accessories" className="hover:underline">
               Accessories
             </Link>
           </div>
