@@ -1,3 +1,5 @@
+import ItemsInCart from '@/app/(site)/itemsInCart';
+import ItemsInWishList from '@/app/(site)/itemsInWishList';
 import { HeartIcon, ShoppingBagIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -48,13 +50,13 @@ export default function Header() {
           {/* Icons */}
           <div className="ml-2 lg:ml-4 relative inline-block">
             <div className="absolute -top-2 -right-2 z-10 bg-yellow-400 text-xs font-bold px-1 py-0.5 rounded-sm">
-              3
+              <ItemsInWishList />
             </div>
             <HeartIcon className="h-7" />
           </div>
           <div className="ml-2 lg:ml-4 relative inline-block">
             <div className="absolute -top-2 -right-2 z-10 bg-yellow-400 text-xs font-bold px-1 py-0.5 rounded-sm">
-              3
+              <ItemsInCart />
             </div>
             <ShoppingBagIcon className="h-7" />
           </div>

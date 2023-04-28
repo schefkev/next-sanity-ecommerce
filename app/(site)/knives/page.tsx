@@ -6,7 +6,6 @@ import Link from 'next/link';
 
 export default async function KnivesPage() {
   const knives = await getKnives();
-  console.log('knives:', knives);
 
   return (
     <div className="container mx-auto">
